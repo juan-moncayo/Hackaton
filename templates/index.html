@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Mercado360</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Mercado360</h1>
+    </header>
+    <main>
+        <section id="admin-section">
+            <h2>Datos del Administrador</h2>
+            <div id="admin-data"></div>
+        </section>
+        <section id="products-section">
+            <h2>Productos</h2>
+            <div id="vendor-types">
+                <button onclick="fetchProducts('informales')">Informales</button>
+                <button onclick="fetchProducts('formales')">Formales</button>
+            </div>
+            <div id="products-data"></div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
